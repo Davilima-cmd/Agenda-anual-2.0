@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.month {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  width: 260px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.month h2 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  background-color: #007BFF;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.day {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  line-height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.day:hover {
+  background-color: #e0e0e0;
+}
+
+.day[data-note]:after {
+  content: "📝";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 12px;
+}
